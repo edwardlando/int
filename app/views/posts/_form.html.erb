@@ -21,7 +21,13 @@
     <%= f.text_area :content %>
   </div>
 
+  <div class="field">
+    <%= f.label :category %> <br/>
+    <%= f.collection_select :category_id, Category.all, :id, :title %>
+  </div>
+
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Publish", :class => "btn btn-large" %>
   </div>
 <% end %>
