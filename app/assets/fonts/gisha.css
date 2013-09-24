@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'GishaRegular';
+    src: url('gisha.eot');
+    src: url('gisha.eot') format('embedded-opentype'),
+         url('gisha.woff') format('woff'),
+         url('gisha.ttf') format('truetype'),
+         url('gisha.svg#GishaRegular') format('svg');
+}
