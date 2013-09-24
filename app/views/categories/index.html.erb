@@ -1,14 +1,21 @@
-<h1>Listing categories</h1>
+<h1>Magazine</h1>
 
 <% @categories.each do |c| %>
-  <div class="span4">
+  <div class="span3 category">
     <div class="category-title">
       <%= c.title %>
     </div>
     <div class="category-posts">
       <% c.posts[0..2].each do |p| %>
-        <%= p.title %>
-        <%= p.content %>
+        <div class="post-title">
+          <%= markdown p.title %>
+        </div>
+        <div class="post-author">
+          <%= p.user %> 
+        </div>
+        <div class="post-content">
+          <%= shorten p.content %>
+        </div>
       <% end %>
     </div>
   </div>
